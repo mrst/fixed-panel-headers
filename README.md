@@ -1,4 +1,4 @@
-fixed-panel-headers
+Fixed Panel Headers for Bootstrap 3
 ===================
 
 Bootstrap 3 fixed panel headers while scrolling.
