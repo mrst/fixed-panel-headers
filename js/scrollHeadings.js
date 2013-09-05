@@ -4,31 +4,31 @@ function UpdatePanelHeaders() {
     offset         = el.offset(),
     scrollTop      = $(window).scrollTop(),
     floatingHeader = $(".floatingHeader", this),
-	absoluteHeader = $(".absoluteHeader", this)
+	absoluteHeader = $(".absoluteHeader", this);
 
-    if ((scrollTop > offset.top) && (scrollTop < offset.top + (el.height() - floatingHeader.outerHeight(false)))) {
+    if ((scrollTop > offset.top) && (scrollTop < offset.top + (el.height() - floatingHeader.outerHeight(false)) + 4)) {
       floatingHeader.css({
         "visibility": "visible"
       });
-	  absoluteHeader.css({
+      absoluteHeader.css({
         "visibility": "hidden"
       });
 	} else if (scrollTop  > (offset.top + el.height() - floatingHeader.outerHeight(false))) {
-	  absoluteHeader.css({
+      absoluteHeader.css({
         "visibility": "visible",
-		"top": (el.height() + offset.top - floatingHeader.outerHeight(true) + 2 )
+		"top": (el.height() + offset.top - floatingHeader.outerHeight(true) + 4 )
       });
-	  floatingHeader.css({
+      floatingHeader.css({
         "visibility": "hidden"
       });
     } else {
       floatingHeader.css({
         "visibility": "hidden"
       });
-	  absoluteHeader.css({
+      absoluteHeader.css({
         "visibility": "hidden"
       });
-    };
+    }
   });
 }
 
